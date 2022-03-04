@@ -1,18 +1,29 @@
-let button = document.querySelector("#highscore-btn");
-
-// Click the button
-
-if (button) {
-  button.click();
-}
-else {
-  console.log("Error");
-}
 
 // when the page loads, the landing page will appear. (page should not refresh)
 // when user clicks start game:
     // quiz will begin
+
+
     // timer will start
+    var timerEl = document.getElementById('timer');
+
+    function countdown() {
+        var timeLeft = 60;
+      
+        // `setInterval()` method to call a function to be executed every 1000 milliseconds
+        var timeInterval = setInterval(function() {
+          // if time left > 0, print time left and decrese time left
+          if(timeLeft > 0) {
+            timerEl.textContent = 'Time: ' +  timeLeft;
+            timeLeft = timeLeft - 1;
+          } else {  // if time left = 0, call display message & call clear interval
+            clearInterval(timeInterval);
+            timerEl.textContent = 'Time is Up!';
+            displayMessage();
+          }
+        }, 1000);
+      }
+      countdown()
 
 // quiz
     // will cycle through a series of 12 questions
