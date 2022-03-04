@@ -8,21 +8,40 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="top container">
-        <div id="high score" class="flex column flex-left">
-            <a class="btn">View High Scores</a>
+    <section class="top-container">
+        <div id="high score">
+            <a id="highscore-btn" class="btn">View High Scores</a>
         </div>
-        <div id="timer" class="flex column flex-right">
+        <div id="timer">
+            <a>TIME</a>
         </div>
+    </section>
         
 
-    <div class="container">
+    <section class="container">
         <div id="home" class="flex-column flex-center">
             <h1>Coding Quiz Challenge</h1>
-            <a class="btn">Start Quiz</a>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds! </p>
+            <button class="btn">Start Quiz</button>  
+        </div>
+    </section>
+
+    <div class="quiz-container">
+        <div id="question" class="quiz-question">
+            <h1>question</h1>
+        </div>
+        <div id="answers" class="quiz-answers">
+            <ul>
+                <button><li>1. </li></button>
+                <button><li>2. </li></button>
+                <button><li>3. </li></button>
+                <button><li>4. </li></button>
+            </ul>
         </div>
     </div>
-  
+    
+    
+
 
 <footer>
     &copy;2022 by Blair Young
