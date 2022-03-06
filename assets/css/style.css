@@ -1,6 +1,29 @@
+:root {
+    --primary: rgb(82, 13, 146);
+    --secondary: rgb(206, 169, 223);
+    --tertiary: rgb(206, 169, 223);
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
+}
+
+.btn {
+    height:40px; 
+    width:100px; 
+    justify-content: center;
+    margin: 0 auto;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 15px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--secondary);
+    box-shadow: 0 2px rgb(216, 214, 214);
 }
 
 .top-container {
@@ -14,12 +37,17 @@ body {
     margin: 20px;
 }
 
+.top-container a {
+    text-decoration: none;
+    color:var(--secondary);
+}
+
 .top-container button {
     height: 40px;
     width: auto;
     padding: 0;
     background-color: #fff;
-    color: rgb(255, 169, 241);
+    color: var(--secondary);
     border-color: #fff; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -58,34 +86,41 @@ body {
     width:100px; 
     justify-content: center;
     margin: 0 auto;
-    background-color: rgb(82, 13, 146);
+    background-color: var(--primary);
     color: #fff;
     border-radius: 15px; 
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+
+
+
+
 
 .quiz-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     height: 50 vh;
     width: 100 vw;
     margin: auto;
     padding: auto;
 }
 
-.quiz-question {
-    justify-content: center;
+.quizContent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     height: fit-content;
-    width: 400px;
-    background-color: #fff;
-    border-radius: 15px;
+    width: 40%;
+    padding-bottom: 15px;
 }
 
-.quiz-question h1 {
+.quizContent h1 {
     color: rgb(0, 0, 0);
-    margin: 15 auto
+    margin: 15 auto;
+    text-align: center;
 }
 
 .quiz-answers {
@@ -100,17 +135,21 @@ body {
     width: auto;
     position:relative;
     margin: 0 auto;
-    background-color: rgb(82, 13, 146);
+    background-color: var(--primary);
     color: #fff;
     border-radius: 15px; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
+
 
 .submitScore {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     height: 50 vh;
     width: 100 vw;
     margin: auto;
@@ -124,8 +163,76 @@ body {
     justify-content: center;
 }
 
+.done h1 {
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+.done p {
+    text-align: center;
+}
+
+
 .initials {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+}
+
+.initials p {
+    text-align: center;
+}
+
+.initials input {
+    align-content: center;
+}
+
+
+
+
+.highScores {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 50 vh;
+    width: 100 vw;
+    margin: auto;
+    padding: auto;
+}
+
+.highScoresLi {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 40%;
+}
+
+.highScoresLi h1 {
+    text-align: center;
+}
+
+.highScoresLi ol li {
+    text-align: left;
+    background-color: var(--secondary);
+}
+
+.hsBtn {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.btn {
+    height:40px; 
+    width:100px; 
+    justify-content: center;
+    margin: 0 auto;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 15px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

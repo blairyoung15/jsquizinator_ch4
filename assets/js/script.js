@@ -1,23 +1,103 @@
 
 // when the page loads, the landing page will appear. (page should not refresh)
 var highscoreBtn = document.getElementById('high-scoreBtn');
-var startQuiz = document.getElementById('startQuiz');
-var answerOne = document.getElementById('answerOne');
-var answerTwo = document.getElementById('answerTwo');
-var answerThree = document.getElementById('answerThree');
-var answerFour = document.getElementById('answerFour');
-var submit = document.getElementById('submit');
-var goBack = document.getElementById('goBack');
-var clear = document.getElementById('clear');
+var startQuizBtn = document.getElementById('startQuiz');
+var questionText = document.getElementById('questionTxt')
+var choiceOneBtn = document.getElementById('choice1');
+var choiceTwoBtn = document.getElementById('choice2');
+var choiceThreeBtn = document.getElementById('choice3');
+var choiceFourBtn = document.getElementById('choice4');
+var submitBtn = document.getElementById('submit');
+var goBackBtn = document.getElementById('goBack');
+var clearBtn = document.getElementById('clear');
+
+let currentQuestion = 0;
+var score = 0;
 
 
-var questions 
+let questions = [
+    {
+        question: "Arrays in JavaScript can be used to store ___",
+        choice1: 'numbers and strings',
+        choice2 'other arrays',
+        choice3: 'booleans',
+        choice4: 'all of the above',
+        answer: 4,
+    },
+    {
+        question: "Arrays in JavaScript can be used to store ___",
+        choice1: 'numbers and strings',
+        choice2 'other arrays',
+        choice3: 'booleans',
+        choice4: 'all of the above',
+        answer: 4
+    },
+   {
+       question: "Arrays in JavaScript can be used to store ___",
+        choice1: 'numbers and strings',
+        choice2 'other arrays',
+        choice3: 'booleans',
+        choice4: 'all of the above',
+        answer: 4,
+   },
+   {
+    question: "Arrays in JavaScript can be used to store ___",
+     choice1: 'numbers and strings',
+     choice2 'other arrays',
+     choice3: 'booleans',
+     choice4: 'all of the above',
+     answer: 4,
+},
+{
+    question: "Arrays in JavaScript can be used to store ___",
+     choice1: 'numbers and strings',
+     choice2 'other arrays',
+     choice3: 'booleans',
+     choice4: 'all of the above',
+     answer: 4,
+},
+
+]
+
+highscoreBtn.addEventListener('click',highscore);
+startQuizBtn.addEventListener('click',start);
+choiceOneBtn.addEventListener('click',choice1);
+choiceTwoBtn.addEventListener('click',choice2);
+choiceThreeBtn.addEventListener('click',choice3);
+choiceFourBtn.addEventListener('click',choice4);
+submitBtn.addEventListener('click',submit);
+goBackBtn.addEventListener('click',goback);
+clearBtn.addEventListener('click',clear);
+
+
+
+
 // when user clicks start game:
+
+var formsArray = [
+    Intro = document.querySelector("#home"),
+    highScoreForm = document.querySelector("#highScoresList"),
+    questionForm = document.querySelector("#question-form")
+];
+// Funtion that reveals selected element while hiding all other elements in an array
+function revealElement(element, elementArr){
+    for(i=0; i < elementArr.length; i++){
+        if(element !== elementArr[i]){
+            elementArr[i].classList.add("hidden");
+        }
+        else{
+            element.classList.remove("hidden");
+        }
+    }
+}
+revealElement()
     // quiz will begin
-function startQuiz() {
+function beginQuiz() {
+    currentQuestion = 0;
+    questionText.innerHTML = questions[currentQuestion].question;
 
 }
-startQuiz()
+beginQuiz()
 
     // timer will start
     var timerEl = document.getElementById('timer');

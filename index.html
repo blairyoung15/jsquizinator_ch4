@@ -10,7 +10,7 @@
 <body>
     <section class="top-container">
         <div class="high-score" id="high-scoreBtn">
-            <a class="btn">View High Scores</a>
+            <a>View High Scores</a>
         </div>
         <div id="timer">
         </div>
@@ -25,20 +25,18 @@
         </div>
     </section>
 
-    <div class="quiz-container">
-        <div id="question" class="quiz-question">
+    <section id="quiz-container" class="quiz-container">
+        <div class="quizContent">
             <h1 id="questionTxt">question</h1>
+                <button class="btn" id="choice1" data="1">1.</button>
+                <br>
+                <button class="btn" id="choice2">2.</button>
+                <br>
+                <button class="btn" id="choice3">3.</button>
+                <br>
+                <button class="btn" id="choice4">4.</button> 
         </div>
-        <div id="answers" class="quiz-answers">
-                <button id="answer1">1.</button>
-                <br>
-                <button id="answer2">2.</button>
-                <br>
-                <button id="answer3">3.</button>
-                <br>
-                <button id="answer4">4.</button>
-        </div>
-    </div>
+    </section>
     
     <section class="submitScore">
         <div id="done" class="done">
@@ -47,12 +45,23 @@
         </div>
             <div id ="enterInitials" class="initials">
             <p>Enter Initials</p><Input></Input>
-            <button class="btn" id="submit"">Submit</button>  
+            <button class="btn" id="submit">Submit</button>  
             </div>
     </section>
 
+    <section class="highScores">
+        <div id="highScoresList" class="highScoresLi">
+            <h1>High Scores</h1>
+            <ol>
+                <li></li>
+            </ol>
+        </div>
+           <div class="hsBtn"></div>
+            <button class="btn" id="goBack">Go Back</button> 
+            <button class="btn" id="clear">Clear High Scores</button> 
+            </div>
+    </section>
 
-    
 
 
 <footer>
