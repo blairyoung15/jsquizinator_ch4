@@ -1,8 +1,23 @@
 
 // when the page loads, the landing page will appear. (page should not refresh)
+var highscoreBtn = document.getElementById('high-scoreBtn');
+var startQuiz = document.getElementById('startQuiz');
+var answerOne = document.getElementById('answerOne');
+var answerTwo = document.getElementById('answerTwo');
+var answerThree = document.getElementById('answerThree');
+var answerFour = document.getElementById('answerFour');
+var submit = document.getElementById('submit');
+var goBack = document.getElementById('goBack');
+var clear = document.getElementById('clear');
+
+
+var questions 
 // when user clicks start game:
     // quiz will begin
+function startQuiz() {
 
+}
+startQuiz()
 
     // timer will start
     var timerEl = document.getElementById('timer');
@@ -26,7 +41,7 @@
       countdown()
 
 // quiz
-    // will cycle through a series of 12 questions
+    // will cycle through a series of 10 questions
     // each answer is given a variable value for time
 
     // when user clicks correct answer, a point is given and "correct" appears under questions
@@ -47,4 +62,12 @@
 
     // view high scores button
         // when clicked, will display high scores that are stored from JSON.stringify in window 
+var container = document.querySelector(".high-score");
+
+container.addEventListener("click", function(event) {
+  var element = event.target;
+// when content box is clicked, the hidden data number will be shown
+ var id = element.getAttribute("data-number");
+ element.textContent = id;
+});
         // give option to close window 

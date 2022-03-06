@@ -14,6 +14,16 @@ body {
     margin: 20px;
 }
 
+.top-container button {
+    height: 40px;
+    width: auto;
+    padding: 0;
+    background-color: #fff;
+    color: rgb(255, 169, 241);
+    border-color: #fff; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -66,14 +76,15 @@ body {
 }
 
 .quiz-question {
+    justify-content: center;
     height: fit-content;
     width: 400px;
-    background-color: rgb(82, 13, 146);
+    background-color: #fff;
     border-radius: 15px;
 }
 
 .quiz-question h1 {
-    color: #fff;
+    color: rgb(0, 0, 0);
     margin: 15 auto
 }
 
@@ -93,4 +104,28 @@ body {
     color: #fff;
     border-radius: 15px; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.submitScore {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 50 vh;
+    width: 100 vw;
+    margin: auto;
+    padding: auto;
+}
+
+.done {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.initials {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
