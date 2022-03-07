@@ -15,7 +15,7 @@ var rightAnsContainer = document.getElementById('rightAnswer');
 var wrongAnsContainer = document.getElementById('wrongAnswer');
 var submitScoreContainer = document.getElementById('submitScore');
 var timerEl = document.getElementById('timer');
-
+var score = 0;
 var currentQIndex = 0;
 var timeLeft = 60;
 
@@ -72,6 +72,7 @@ function displayQuestions() {
     choiceTwoBtn.textContent = "2. " + questions[currentQIndex].choice[1];
     choiceThreeBtn.textContent = "3. " + questions[currentQIndex].choice[2];
     choiceFourBtn.textContent = "4. " + questions[currentQIndex].choice[3];
+    answers()
     choiceOneBtn.addEventListener('click', nextQuestion)
     choiceTwoBtn.addEventListener('click', nextQuestion)
     choiceThreeBtn.addEventListener('click', nextQuestion)
@@ -106,8 +107,10 @@ function clearInterval() {
 }
 
 function answers() {
-    if (questions[currentQIndex].answer == true) {
+    console.log(questions[currentQIndex].answer)
+    if (questions[currentQIndex].answer == questions[currentQIndex].choice) {
     rightAnsContainer.style.display = 'flex';
+    score++;
     }
     else {
         wrongAnsContainer.style.display = 'flex';
