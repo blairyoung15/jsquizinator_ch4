@@ -97,7 +97,7 @@ body {
 
 
 .quiz-container {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
@@ -145,7 +145,7 @@ body {
 
 
 .submitScore {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
@@ -192,7 +192,7 @@ body {
 
 
 .highScores {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;

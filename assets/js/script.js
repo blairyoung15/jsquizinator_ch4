@@ -14,6 +14,7 @@ var clearBtn = document.getElementById('clear');
 var currentQuestion = 0;
 var score = 0;
 
+// timer variables
 var totalTime = 90;
 var wrongChoiceDeduct = 10;
 
@@ -126,7 +127,7 @@ var highScoreRecEl = document.querySelector("#highScoresList");
 var taskFormHandler = function(event) {
     event.preventDefault();
     var NameInput = document.querySelector("input[name='initials']").value;
-    var scoreTotal = 
+    var scoreTotal = 0
 
     // check if input values are empty strings
 if (!NameInput) {
