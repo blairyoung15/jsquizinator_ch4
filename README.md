@@ -23,7 +23,7 @@ After clicking start quiz, the timer in the upper right corner will start and us
 <img src="https://github.com/blairyoung15/jsquizinator_ch4/blob/main/assets/images/Screen%20Shot%202022-03-06%20at%2010.13.26%20PM.png" width="90%"></img>
 <img src="https://github.com/blairyoung15/jsquizinator_ch4/blob/main/assets/images/Screen%20Shot%202022-03-06%20at%2010.13.33%20PM.png" width="90%"></img>
 <img src="https://github.com/blairyoung15/jsquizinator_ch4/blob/main/assets/images/Screen%20Shot%202022-03-06%20at%2010.13.42%20PM.png" width="90%"></img>
-<img src="https://github.com/blairyoung15/jsquizinator_ch4/blob/main/assets/images/Screen%20Shot%202022-03-06%20at%2010.13.52%20PM.png width="90%"></img>
+<img src="https://github.com/blairyoung15/jsquizinator_ch4/blob/main/assets/images/Screen%20Shot%202022-03-06%20at%2010.13.52%20PM.png" width="90%"></img>
 
 
 ### credits 
