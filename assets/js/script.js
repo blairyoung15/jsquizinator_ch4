@@ -19,7 +19,7 @@ let questions = [
     {
         question: "Arrays in JavaScript can be used to store ___",
         choice1: 'numbers and strings',
-        choice2 'other arrays',
+        choice2: 'other arrays',
         choice3: 'booleans',
         choice4: 'all of the above',
         answer: 4,
@@ -27,7 +27,7 @@ let questions = [
     {
         question: "Arrays in JavaScript can be used to store ___",
         choice1: 'numbers and strings',
-        choice2 'other arrays',
+        choice2: 'other arrays',
         choice3: 'booleans',
         choice4: 'all of the above',
         answer: 4
@@ -35,7 +35,7 @@ let questions = [
    {
        question: "Arrays in JavaScript can be used to store ___",
         choice1: 'numbers and strings',
-        choice2 'other arrays',
+        choice2: 'other arrays',
         choice3: 'booleans',
         choice4: 'all of the above',
         answer: 4,
@@ -43,7 +43,7 @@ let questions = [
    {
     question: "Arrays in JavaScript can be used to store ___",
      choice1: 'numbers and strings',
-     choice2 'other arrays',
+     choice2: 'other arrays',
      choice3: 'booleans',
      choice4: 'all of the above',
      answer: 4,
@@ -51,7 +51,7 @@ let questions = [
 {
     question: "Arrays in JavaScript can be used to store ___",
      choice1: 'numbers and strings',
-     choice2 'other arrays',
+     choice2: 'other arrays',
      choice3: 'booleans',
      choice4: 'all of the above',
      answer: 4,
@@ -91,6 +91,8 @@ function revealElement(element, elementArr){
     }
 }
 revealElement()
+
+
     // quiz will begin
 function beginQuiz() {
     currentQuestion = 0;
@@ -136,6 +138,50 @@ beginQuiz()
     // end of questions, give total correct and store as value 
         // allow user to enter initals to record score
              // scores are stored in JSON.stringify
+var initialsInputEl = document.querySelector("#initials");
+var highScoreRecEl = document.querySelector("#highScoresList");
+
+var taskFormHandler = function(event) {
+    event.preventDefault();
+    var NameInput = document.querySelector("input[name='initials']").value;
+    var scoreTotal = 
+
+    // check if input values are empty strings
+if (!NameInput) {
+    alert("Please enter your initials!");
+    return false;
+  }
+  
+  formEl.reset();
+    // package up data as an object
+    var hsDataObj = {
+      name: NameInput,
+      score: scoreTotal,
+    
+    };
+  
+    // send it as an argument to createTaskEl
+    createHSEl(hsDataObj);
+  };
+
+var createHSEl = function(hsDataObj) {
+      // create list item
+var listItemEl = document.createElement("li");
+listItemEl.className = "high-score";
+
+// create div to hold task info and add to list item
+var hSInfoEl = document.createElement("div");
+hSInfoEl.className = "high-score";
+hSInfoEl.innerHTML = "<h3 class='high-score'>" + hsDataObj.name + "</h3><span class='score-total'>" + hsDataObj.score + "</span>";
+
+listItemEl.appendChild(hSInfoEl);
+
+// add entire list item to list
+tasksToDoEl.appendChild(listItemEl);
+
+};
+
+  formEl.addEventListener("submit", taskFormHandler);
 
         // go back button (restart game?)
         // clear high scores button 

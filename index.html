@@ -10,7 +10,7 @@
 <body>
     <section class="top-container">
         <div class="high-score" id="high-scoreBtn">
-            <a>View High Scores</a>
+            <a href="highscores.html">View High Scores</a>
         </div>
         <div id="timer">
         </div>
@@ -44,17 +44,15 @@
             <p>Your final score is</p>
         </div>
             <div id ="enterInitials" class="initials">
-            <p>Enter Initials</p><Input></Input>
+            <p>Enter Initials</p><Input id="initials"></Input>
             <button class="btn" id="submit">Submit</button>  
             </div>
     </section>
 
     <section class="highScores">
-        <div id="highScoresList" class="highScoresLi">
+        <div class="highScoresLi">
             <h1>High Scores</h1>
-            <ol>
-                <li></li>
-            </ol>
+            <ol id="highScoresList"></ol>
         </div>
            <div class="hsBtn"></div>
             <button class="btn" id="goBack">Go Back</button> 
