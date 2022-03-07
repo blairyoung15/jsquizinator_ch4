@@ -10,8 +10,8 @@ body {
 }
 
 .btn {
-    height:40px; 
-    width:100px; 
+    height: auto; 
+    width: auto; 
     justify-content: center;
     margin: 0 auto;
     background-color: var(--primary);

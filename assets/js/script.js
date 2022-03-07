@@ -1,6 +1,5 @@
 
 // when the page loads, the landing page will appear. (page should not refresh)
-var highscoreBtn = document.getElementById('high-scoreBtn');
 var startQuizBtn = document.getElementById('startQuiz');
 var questionText = document.getElementById('questionTxt')
 var choiceOneBtn = document.getElementById('choice1');
@@ -96,6 +95,7 @@ beginQuiz()
           if(timeLeft > 0) {
             timerEl.textContent = 'Time: ' +  timeLeft;
             timeLeft = timeLeft - 1;
+            // timeLeft--
           } else {  // if time left = 0, call display message & call clear interval
             clearInterval(timeInterval);
             timerEl.textContent = 'Time is Up!';
@@ -180,3 +180,4 @@ container.addEventListener("click", function(event) {
  element.textContent = id;
 });
         // give option to close window 
+    
