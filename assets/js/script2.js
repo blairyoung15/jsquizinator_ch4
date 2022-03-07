@@ -11,6 +11,8 @@ var goBackBtn = document.getElementById('goBack');
 var clearBtn = document.getElementById('clear');
 var quizContainer = document.getElementById('quiz-container');
 var codingContainer = document.getElementById('home');
+var rightAnsContainer = document.getElementById('rightAnswer');
+var wrongAnsContainer = document.getElementById('wrongAnswer');
 var submitScoreContainer = document.getElementById('submitScore');
 var timerEl = document.getElementById('timer');
 
@@ -84,6 +86,8 @@ function nextQuestion() {
     if (currentQIndex < questions.length - 1) {
         currentQIndex++
         displayQuestions()
+        rightAnsContainer.style.display = 'none';
+        wrongAnsContainer.style.display = 'none';
     }
     else {
         endQuiz()
@@ -95,14 +99,21 @@ function endQuiz() {
     quizContainer.style.display = 'none';
     submitScoreContainer.style.display = 'flex';
     clearInterval()
-
-
 }
 
 function clearInterval() {
     timeLeft = 0;
 }
 
+function answers() {
+    if (questions[currentQIndex].answer == true) {
+    rightAnsContainer.style.display = 'flex';
+    }
+    else {
+        wrongAnsContainer.style.display = 'flex';
+        timeLeft = timeLeft - 10
+    }
+}
 startQuizBtn.addEventListener('click', start)
 
 

@@ -141,8 +141,25 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.rightAnswer, .wrongAnswer {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 50 vh;
+    width: 40%;
+    border-top: 3px solid;
+    border-top-color: darkgrey;
+    margin: auto;
+    padding: auto;
+}
 
-
+.rightAnswer h1, .wrongAnswer h1 {
+    color: darkgrey;
+    font-style: italic;
+    font-weight: lighter;
+}
 
 .submitScore {
     display: none;
@@ -192,7 +209,7 @@ body {
 
 
 .highScores {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;

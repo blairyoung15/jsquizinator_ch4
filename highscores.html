@@ -8,52 +8,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-<!-- container at top of page, holds high scores link and timer-->
-    <section class="top-container">
-        <div class="high-score" id="high-scoreBtn">
-            <a href="highscores.html">View High Scores</a>
-        </div>
-        <div id="timer">
-        </div>
-    </section>
-        
-<!-- container holds the home into with start quiz button -->
-    <section class="container">
-        <div id="home" class="introduction">
-            <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds! </p>
-            <button class="btn" id="startQuiz" onclick="countdown();">Start Quiz</button>  
-        </div>
-    </section>
 
-
-<!-- container holds the questions and choices -->
-    <section id="quiz-container" class="quiz-container">
-        <div class="quizContent">
-            <h1 id="questionTxt">question</h1>
-                <button class="btn" id="choice1" data="1">1.</button>
-                <br>
-                <button class="btn" id="choice2">2.</button>
-                <br>
-                <button class="btn" id="choice3">3.</button>
-                <br>
-                <button class="btn" id="choice4">4.</button> 
-        </div>
-    </section>
- 
-    <!-- container is where user submits initials and sees their total score -->
-    <section class="submitScore">
-        <div id="done" class="done">
-            <h1>All Done!</h1>
-            <p>Your final score is</p>
-        </div>
-            <div id ="enterInitials" class="initials">
-            <p>Enter Initials</p><Input id="initials"></Input>
-            <button class="btn" id="submit">Submit</button>  
-            </div>
-    </section>
-
-    <!-- references the highscores list -->
+<!-- references the highscores list -->
     <section class="highScores">
         <div class="highScoresLi">
             <h1>High Scores</h1>
