@@ -11,53 +11,35 @@ var submitBtn = document.getElementById('submit');
 var goBackBtn = document.getElementById('goBack');
 var clearBtn = document.getElementById('clear');
 
-let currentQuestion = 0;
+var currentQuestion = 0;
 var score = 0;
 
+var totalTime = 90;
+var wrongChoiceDeduct = 10;
 
-let questions = [
+
+var questions = [
     {
         question: "Arrays in JavaScript can be used to store ___",
-        choice1: 'numbers and strings',
-        choice2: 'other arrays',
-        choice3: 'booleans',
-        choice4: 'all of the above',
-        answer: 4,
+        choice: ['numbers and strings', 'other arrays', 'booleans', 'all of the above'],
+        answer: 'all of the above',
     },
     {
         question: "Arrays in JavaScript can be used to store ___",
-        choice1: 'numbers and strings',
-        choice2: 'other arrays',
-        choice3: 'booleans',
-        choice4: 'all of the above',
-        answer: 4
+        choice: ['numbers and strings', 'other arrays', 'booleans', 'all of the above'],
+        answer: 'all of the above',
     },
-   {
-       question: "Arrays in JavaScript can be used to store ___",
-        choice1: 'numbers and strings',
-        choice2: 'other arrays',
-        choice3: 'booleans',
-        choice4: 'all of the above',
-        answer: 4,
-   },
-   {
-    question: "Arrays in JavaScript can be used to store ___",
-     choice1: 'numbers and strings',
-     choice2: 'other arrays',
-     choice3: 'booleans',
-     choice4: 'all of the above',
-     answer: 4,
-},
-{
-    question: "Arrays in JavaScript can be used to store ___",
-     choice1: 'numbers and strings',
-     choice2: 'other arrays',
-     choice3: 'booleans',
-     choice4: 'all of the above',
-     answer: 4,
-},
-
-]
+    {
+        question: "Arrays in JavaScript can be used to store ___",
+        choice: ['numbers and strings', 'other arrays', 'booleans', 'all of the above'],
+        answer: 'all of the above',
+    },
+    {
+        question: "Arrays in JavaScript can be used to store ___",
+        choice: ['numbers and strings', 'other arrays', 'booleans', 'all of the above'],
+        answer: 'all of the above',
+    },
+];
 
 highscoreBtn.addEventListener('click',highscore);
 startQuizBtn.addEventListener('click',start);
